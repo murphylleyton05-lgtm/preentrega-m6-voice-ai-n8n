@@ -1,0 +1,137 @@
+{
+  "id": "M6SeedRagManual1",
+  "name": "PRUEBA · Cargar índice RAG (manual M5 v2.1)",
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "nodes": [
+    {
+      "id": "e5d1cf5f-35de-441f-bccf-2a55bcb2cdda",
+      "name": "Cargar índice",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "7f256ad1-251e-4ffe-95aa-0e3b3e30d069",
+      "name": "Fragmentos del Manual v2.1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        220,
+        0
+      ],
+      "parameters": {
+        "jsCode": "return [{\"json\": {\"seccion\": \"1. Alcance y vigencia\", \"texto\": \"1. Alcance y vigencia\\nEste manual aplica a todas las compras realizadas en la tienda online (web y WhatsApp de\\nventas) con entrega dentro de la República Argentina. Reemplaza a la versión 2.0 y a todas las\\ncirculares anteriores. Los montos están expresados en pesos argentinos con IVA incluido.\\n2. Envíos\"}}, {\"json\": {\"seccion\": \"2.1 Zonas, plazos y costos\", \"texto\": \"2. Envíos > 2.1 Zonas, plazos y costos\\nEl plazo se cuenta en días hábiles desde la acreditación del pago. Los pedidos acreditados\\ndespués de las 13:00 h se despachan al día hábil siguiente.\\nZona | Cobertura | Plazo de entrega | Costo\\nAMBA | CABA y GBA (hasta 40 km) | 24 a 48 h hábiles | $4.500\\nCentro | Córdoba, Santa Fe, Entre Ríos, resto de Buenos Aires | 48 a 72 h hábiles | $6.900\\nInterior | Cuyo, NOA, NEA | 3 a 5 días hábiles | $8.900\\nPatagonia | Neuquén a Tierra del Fuego | 5 a 7 días hábiles | $11.500\"}}, {\"json\": {\"seccion\": \"2.2 Envío gratis\", \"texto\": \"2. Envíos > 2.2 Envío gratis\\nEl envío es gratis en compras desde $80.000 a las zonas AMBA y Centro. Para Interior y\\nPatagonia se bonifica el 50% del costo de envío en compras desde $120.000.\"}}, {\"json\": {\"seccion\": \"2.3 Seguimiento y demoras\", \"texto\": \"2. Envíos > 2.3 Seguimiento y demoras\\nAl despachar el pedido el cliente recibe por email el número de seguimiento del correo. Si el\\npedido supera en más de 2 días hábiles el plazo de la tabla 2.1, soporte abre un reclamo con el\\ncorreo y, si el paquete se pierde, se reenvía el producto sin cargo o se reintegra el 100% del\\nimporte a elección del cliente.\\n3. Medios de pago\"}}, {\"json\": {\"seccion\": \"3.1 Opciones y cuotas\", \"texto\": \"3. Medios de pago > 3.1 Opciones y cuotas\\nMedio de pago | Cuotas | Condición\\nTarjeta de crédito bancaria (Visa, | Hasta 6 cuotas sin | Compra mínima de $30.000\\nMastercard, Amex) | interés\\nTarjeta de crédito bancaria | 9 y 12 cuotas | Con recargo del 18% y 27%\\nrespectivamente\\nTarjeta de débito | 1 pago | Sin recargo\\nTransferencia bancaria | 1 pago | 10% de descuento; reserva de\\nstock por 24 h\\nMercado Pago (dinero en cuenta) | 1 pago | Sin recargo\"}}, {\"json\": {\"seccion\": \"3.2 Facturación\", \"texto\": \"3. Medios de pago > 3.2 Facturación\\nSe emite factura B a consumidores finales y factura A a responsables inscriptos que informen\\nsu CUIT antes del pago. La factura llega por email dentro de las 48 h de acreditado el pago. No\\nse modifican facturas ya emitidas: se anula con nota de crédito y se emite una nueva.\\n4. Cambios y devoluciones\"}}, {\"json\": {\"seccion\": \"4.1 Derecho de arrepentimiento\", \"texto\": \"4. Cambios y devoluciones > 4.1 Derecho de arrepentimiento\\nSegún el artículo 34 de la Ley 24.240 de Defensa del Consumidor, el cliente puede arrepentirse\\nde la compra dentro de los 10 días corridos desde que recibe el producto, sin necesidad de\\nexplicar el motivo. El producto debe estar sin uso, con su embalaje original y todos sus\\naccesorios. La tienda cubre el costo del retiro y reintegra el 100% del importe por el mismo\\nmedio de pago dentro de los 10 días hábiles de recibido el producto.\\nEl botón de arrepentimiento está en el pie de la página web. También se puede pedir por email\\na soporte@lleytontech.com.ar indicando el número de pedido.\"}}, {\"json\": {\"seccion\": \"4.2 Producto con falla de fábrica\", \"texto\": \"4. Cambios y devoluciones > 4.2 Producto con falla de fábrica\\nSi el producto presenta una falla de fábrica dentro de los 30 días corridos desde la entrega, el\\ncliente elige entre el cambio por una unidad nueva o el reembolso total. La tienda paga el envío\\nde ida y vuelta. Pasados los 30 días, rige la garantía del punto 5.\"}}, {\"json\": {\"seccion\": \"4.3 Cambio por otro modelo o color\", \"texto\": \"4. Cambios y devoluciones > 4.3 Cambio por otro modelo o color\\nSe acepta el cambio por otro modelo o color dentro de los 15 días corridos desde la entrega,\\ncon el producto sin uso y en su caja original. Si el nuevo producto es más caro, el cliente abona\\nla diferencia; si es más barato, la diferencia se entrega como crédito para una próxima compra.\\nEl envío del cambio corre por cuenta del cliente.\"}}, {\"json\": {\"seccion\": \"4.4 Excepciones\", \"texto\": \"4. Cambios y devoluciones > 4.4 Excepciones\\nAuriculares in-ear y productos de higiene personal con el precinto abierto no admiten\\narrepentimiento ni cambio por modelo, salvo falla de fábrica (punto 4.2).\\nLicencias de software y tarjetas de regalo digitales no admiten devolución una vez\\nenviado el código.\\nProductos con daño por mal uso, golpes o humedad quedan excluidos de cambios y\\ngarantía.\"}}, {\"json\": {\"seccion\": \"5. Garantía\", \"texto\": \"5. Garantía\\nLa garantía cubre defectos de fabricación y se gestiona con la factura de compra. Durante la\\ngarantía, la tienda coordina el servicio técnico oficial y cubre el envío.\\nCategoría | Plazo de garantía | Quién la presta\\nNotebooks y PCs | 12 meses | Fabricante (service oficial)\\nCelulares y tablets | 12 meses | Fabricante (service oficial)\\nMonitores | 12 meses | Fabricante (service oficial)\\nAccesorios (cables, fundas, mouse, teclados) | 6 meses | Lleyton Tech Store\\nProductos reacondicionados | 3 meses | Lleyton Tech Store\\n6. Atención al cliente\"}}, {\"json\": {\"seccion\": \"6.1 Canales y horarios\", \"texto\": \"6. Atención al cliente > 6.1 Canales y horarios\\nSoporte atiende por email (soporte@lleytontech.com.ar) y por WhatsApp de lunes a viernes de\\n9:00 a 18:00 h y sábados de 9:00 a 13:00 h. Los mensajes recibidos fuera de horario se\\nresponden el siguiente día hábil.\"}}, {\"json\": {\"seccion\": \"6.2 Tiempos de respuesta comprometidos\", \"texto\": \"6. Atención al cliente > 6.2 Tiempos de respuesta comprometidos\\nPrioridad | Ejemplos | Primera respuesta\\nAlta | Pedido perdido, cobro duplicado, producto con falla | Dentro de 4 h hábiles\\nMedia | Demora de envío, cambio o devolución | Dentro de 24 h hábiles\\nBaja | Consultas de preventa, factura, stock | Dentro de 48 h hábiles\"}}, {\"json\": {\"seccion\": \"6.3 Escalamiento\", \"texto\": \"6. Atención al cliente > 6.3 Escalamiento\\nLos reclamos que piden un reintegro fuera de política, involucran un monto mayor a $300.000 o\\nmencionan acciones legales se derivan al Supervisor de Atención al Cliente. El agente de IA\\nnunca promete reintegros: solo prepara un borrador que un humano aprueba.\"}}, {\"json\": {\"seccion\": \"7. Protección de datos personales\", \"texto\": \"7. Protección de datos personales\\nLos datos del cliente se usan solo para gestionar su compra, conforme a la Ley 25.326.\\nSoporte nunca pide por email ni WhatsApp el número completo de la tarjeta, el código de\\nseguridad ni contraseñas. El cliente puede pedir el acceso, la rectificación o la baja de sus\\ndatos escribiendo a privacidad@lleytontech.com.ar.\"}}];"
+      }
+    },
+    {
+      "id": "4c3aac38-23f0-48bb-a06f-81a9b81391d7",
+      "name": "Indexar (politicas_tienda_v2_1)",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+      "typeVersion": 1.2,
+      "position": [
+        460,
+        0
+      ],
+      "parameters": {
+        "mode": "insert",
+        "memoryKey": {
+          "__rl": true,
+          "mode": "id",
+          "value": "politicas_tienda_v2_1"
+        },
+        "clearStore": true
+      }
+    },
+    {
+      "id": "af24a5af-5a49-4dfe-87ad-eaf12fa86aa8",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        400,
+        220
+      ],
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      }
+    },
+    {
+      "id": "60b08e95-6c85-4972-9515-fb4c523227a6",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1.1,
+      "position": [
+        600,
+        220
+      ],
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.texto }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "seccion",
+                "value": "={{ $json.seccion }}"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Cargar índice": {
+      "main": [
+        [
+          {
+            "node": "Fragmentos del Manual v2.1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fragmentos del Manual v2.1": {
+      "main": [
+        [
+          {
+            "node": "Indexar (politicas_tienda_v2_1)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Indexar (politicas_tienda_v2_1)",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Indexar (politicas_tienda_v2_1)",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
