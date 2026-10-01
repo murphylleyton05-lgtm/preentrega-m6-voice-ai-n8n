@@ -8,6 +8,7 @@ Circuito cerrado conversacional de voz en n8n: el cliente manda una **nota de vo
 
 | Archivo / carpeta | Qué es |
 |---|---|
+| [`PreEntrega_Modulo6_LleytonMurphy.docx`](./PreEntrega_Modulo6_LleytonMurphy.docx) | La misma entrega en Word (.docx), 17 páginas. |
 | [`PreEntrega_Modulo6_LleytonMurphy.pdf`](./PreEntrega_Modulo6_LleytonMurphy.pdf) | **Entregable** (17 páginas): checklist de la consigna, diagnóstico de viabilidad (ROI y fatiga cognitiva), capturas de la configuración en n8n, System Prompt, Compliance, flujo en formato texto y prueba de punta a punta. |
 | [`checkpoint6_lleyton_murphy.json`](./checkpoint6_lleyton_murphy.json) | Flujo de n8n completo (M5 + capa de voz, 56 nodos). Se importa con *Import from File*. |
 | [`capturas/configuracion/`](./capturas/configuracion) | Capturas del editor de n8n: lienzo y panel de cada nodo. |
